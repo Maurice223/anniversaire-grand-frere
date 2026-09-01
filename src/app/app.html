@@ -1,0 +1,1104 @@
+<!-- =========================================================
+     JOYEUX ANNIVERSAIRE PIERRE TOGO
+     Créé avec ❤️ par Maurice
+========================================================= -->
+
+<div class="birthday-app">
+
+  <!-- ======================================================
+       ARRIÈRE-PLAN
+  ======================================================= -->
+
+  <div class="background-layer"></div>
+  <div class="background-glow glow-one"></div>
+  <div class="background-glow glow-two"></div>
+
+  <div class="stars"></div>
+  <div class="stars stars2"></div>
+  <div class="stars stars3"></div>
+
+  <!-- ======================================================
+       COMPTE À REBOURS
+  ======================================================= -->
+
+  @if (!estArrive) {
+
+  <main class="countdown-page">
+
+    <!-- Badge -->
+    <div class="countdown-badge">
+      <span class="badge-dot"></span>
+
+      <span>
+          02 SEPTEMBRE 2026
+        </span>
+    </div>
+
+
+    <!-- Petit titre -->
+    <p class="eyebrow">
+      UNE DATE SPÉCIALE APPROCHE
+    </p>
+
+
+    <!-- Titre principal -->
+    <h1 class="countdown-title">
+
+      Une surprise
+
+      <span class="countdown-title-gold">
+          pour Pierre
+        </span>
+
+    </h1>
+
+
+    <!-- Description -->
+    <p class="countdown-description">
+
+      Certaines personnes rendent la vie plus belle simplement
+      par leur présence.
+
+      <br><br>
+
+      Pour célébrer une personne exceptionnelle,
+      une petite surprise t'attend.
+
+    </p>
+
+
+    <!-- Ligne décorative -->
+    <div class="luxury-separator">
+
+      <span></span>
+
+      <div class="separator-icon">
+        ✦
+      </div>
+
+      <span></span>
+
+    </div>
+
+
+    <!-- Compteur -->
+    <div class="countdown-grid">
+
+      <div class="timer-card">
+
+        <div class="timer-number">
+          {{ jours }}
+        </div>
+
+        <div class="timer-label">
+          Jours
+        </div>
+
+      </div>
+
+
+      <div class="timer-card">
+
+        <div class="timer-number">
+          {{ heures }}
+        </div>
+
+        <div class="timer-label">
+          Heures
+        </div>
+
+      </div>
+
+
+      <div class="timer-card">
+
+        <div class="timer-number">
+          {{ minutes }}
+        </div>
+
+        <div class="timer-label">
+          Minutes
+        </div>
+
+      </div>
+
+
+      <div class="timer-card timer-seconds">
+
+        <div class="timer-number">
+          {{ secondes }}
+        </div>
+
+        <div class="timer-label">
+          Secondes
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <!-- Message du bas -->
+    <div class="midnight-message">
+
+        <span class="midnight-icon">
+          🎂
+        </span>
+
+      <div>
+
+        <strong>
+          Rendez-vous à minuit
+        </strong>
+
+        <p>
+          La surprise sera automatiquement dévoilée.
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <!-- Signature -->
+    <p class="countdown-signature">
+      Préparé avec ❤️ par Maurice
+    </p>
+
+
+    <!-- Scroll décoratif -->
+    <div class="scroll-indicator">
+
+      <span></span>
+
+    </div>
+
+  </main>
+
+  }
+
+
+  <!-- ======================================================
+       SITE ANNIVERSAIRE
+  ======================================================= -->
+
+  @if (estArrive) {
+
+  <!-- ============================================
+       BOUTON MUSIQUE
+  ============================================= -->
+
+  <button
+    type="button"
+    class="music-button"
+    [class.music-playing]="estEnLecture"
+    (click)="toggleMusique()"
+    aria-label="Contrôler la musique"
+  >
+
+      <span class="music-icon">
+
+        @if (estEnLecture) {
+          ♫
+        } @else {
+          ♪
+        }
+
+      </span>
+
+    <span class="music-text">
+
+        {{ estEnLecture ? 'Musique activée' : 'Jouer la musique' }}
+
+      </span>
+
+    @if (estEnLecture) {
+
+    <span class="sound-wave">
+
+          <i></i>
+          <i></i>
+          <i></i>
+
+        </span>
+
+    }
+
+  </button>
+
+
+  <!-- ============================================
+       COEURS FLOTTANTS
+  ============================================= -->
+
+  <div class="hearts-container" aria-hidden="true">
+
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+    <span>♥</span>
+
+  </div>
+
+
+  <!-- ============================================
+       HERO
+  ============================================= -->
+
+  <section class="hero-section">
+
+    <div class="hero-content">
+
+      <!-- Texte supérieur -->
+      <div class="hero-badge">
+
+          <span>
+            ✦
+          </span>
+
+        HAPPY BIRTHDAY KING
+
+        <span>
+            ✦
+          </span>
+
+      </div>
+
+
+      <!-- Photo -->
+      <div class="hero-photo-wrapper">
+
+        <div class="photo-glow"></div>
+
+        <div class="photo-orbit orbit-one"></div>
+        <div class="photo-orbit orbit-two"></div>
+
+        <div class="hero-photo">
+
+          <img
+            src="assets/photos/pierre8a.jpeg"
+            alt="Pierre Togo"
+          >
+
+        </div>
+
+
+        <div class="crown">
+          👑
+        </div>
+
+      </div>
+
+
+      <!-- Nom -->
+      <div class="hero-name-container">
+
+        <p class="hero-intro">
+          Aujourd'hui, nous célébrons
+        </p>
+
+        <h1 class="hero-name">
+
+          Pierre
+
+          <span>
+              Togo
+            </span>
+
+        </h1>
+
+      </div>
+
+
+      <!-- Phrase -->
+      <p class="hero-quote">
+
+        « Une nouvelle année de vie,
+        une nouvelle page à écrire,
+        encore plus belle que les précédentes. »
+
+      </p>
+
+
+      <!-- Boutons -->
+      <div class="hero-actions">
+
+        <button
+          type="button"
+          class="button-primary"
+          (click)="lancerConfettis()"
+        >
+
+            <span>
+              🎉
+            </span>
+
+          Célébrer
+
+        </button>
+
+
+        <button
+          type="button"
+          class="button-secondary"
+          (click)="allerAuMessage()"
+        >
+
+            <span>
+              ❤️
+            </span>
+
+          Lire mon message
+
+        </button>
+
+      </div>
+
+
+      <!-- Scroll -->
+      <div class="hero-scroll">
+
+        <p>
+          Découvrir la surprise
+        </p>
+
+        <div class="scroll-mouse">
+
+          <span></span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       PETIT MOT
+  ======================================================= -->
+
+  <section
+    id="message-maurice"
+    class="message-section"
+  >
+
+    <div class="section-container">
+
+      <div class="section-heading">
+
+          <span class="section-kicker">
+            DE TON PETIT FRÈRE
+          </span>
+
+        <h2>
+          Quelques mots
+          <span>pour toi</span>
+        </h2>
+
+      </div>
+
+
+      <div class="letter-card">
+
+        <div class="letter-decoration">
+          “
+        </div>
+
+
+        <div class="letter-header">
+
+          <div class="mini-photo">
+
+            <img
+              src="assets/photos/pierre8a.jpeg"
+              alt="Pierre"
+            >
+
+          </div>
+
+          <div>
+
+            <p>
+              Pour
+            </p>
+
+            <strong>
+              Pierre Togo
+            </strong>
+
+          </div>
+
+        </div>
+
+
+        <div class="letter-body">
+
+          <p>
+            Aujourd'hui n'est pas un jour comme les autres.
+            C'est le jour où une personne très importante pour moi
+            célèbre une nouvelle année de vie.
+          </p>
+
+
+          <p>
+            Grand frère, je voulais profiter de cette journée
+            pour te dire merci. Merci pour ta présence,
+            tes conseils, ton soutien et tous ces moments
+            que nous avons partagés.
+          </p>
+
+
+          <p>
+            Je prie que cette nouvelle année de ta vie t'apporte
+            encore plus de réussite, de paix, de bonheur
+            et de belles opportunités.
+          </p>
+
+
+          <p>
+            Que Dieu continue de guider chacun de tes pas,
+            qu'Il protège tes projets, réalise tes ambitions
+            et t'accorde une longue vie remplie de bénédictions.
+          </p>
+
+
+          <p class="letter-highlight">
+
+            Continue d'avancer, de rêver grand
+            et surtout de rester cette personne exceptionnelle
+            que tu es.
+
+          </p>
+
+
+          <p>
+            Peu importe où la vie nous emmènera,
+            sache que tu pourras toujours compter sur ton petit frère.
+          </p>
+
+
+          <p class="birthday-wish">
+
+            Joyeux anniversaire Grand Frère. ❤️
+          </p>
+
+        </div>
+
+
+        <div class="letter-signature">
+
+            <span>
+              Avec tout mon amour,
+            </span>
+
+          <strong>
+            Maurice
+          </strong>
+
+          <small>
+            Ton petit frère ❤️
+          </small>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       QUALITÉS
+  ======================================================= -->
+
+  <section class="qualities-section">
+
+    <div class="section-container">
+
+      <div class="section-heading centered">
+
+          <span class="section-kicker">
+            POUR UNE PERSONNE UNIQUE
+          </span>
+
+        <h2>
+          Quelques mots qui
+          <span>te définissent</span>
+        </h2>
+
+      </div>
+
+
+      <div class="qualities-grid">
+
+        <div class="quality-card">
+
+          <div class="quality-icon">
+            👑
+          </div>
+
+          <h3>
+            Un grand frère
+          </h3>
+
+          <p>
+            Toujours là pour conseiller, guider
+            et montrer le bon chemin.
+          </p>
+
+        </div>
+
+
+        <div class="quality-card">
+
+          <div class="quality-icon">
+            ❤️
+          </div>
+
+          <h3>
+            Une personne précieuse
+          </h3>
+
+          <p>
+            Une présence qui compte énormément
+            pour ceux qui ont la chance de te connaître.
+          </p>
+
+        </div>
+
+
+        <div class="quality-card">
+
+          <div class="quality-icon">
+            ✨
+          </div>
+
+          <h3>
+            Une inspiration
+          </h3>
+
+          <p>
+            Continue d'avancer et de construire
+            la belle histoire qui t'attend.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       GALERIE
+  ======================================================= -->
+
+  <section class="gallery-section">
+
+    <div class="section-container">
+
+      <div class="section-heading centered">
+
+          <span class="section-kicker">
+            SOUVENIRS
+          </span>
+
+        <h2>
+          Quelques
+          <span>moments précieux</span>
+        </h2>
+
+        <p>
+          Parce que chaque photo raconte
+          une petite partie d'une grande histoire.
+        </p>
+
+      </div>
+
+
+      <div class="gallery-grid">
+
+        @for (photo of photos; track photo.url; let index = $index) {
+
+        <button
+          type="button"
+          class="gallery-card"
+          (click)="ouvrirPhoto(index)"
+        >
+
+          <img
+            [src]="photo.url"
+            [alt]="photo.legende"
+            loading="lazy"
+          >
+
+
+          <div class="gallery-overlay">
+
+                <span class="gallery-number">
+                  0{{ index + 1 }}
+                </span>
+
+            <div>
+
+              <p>
+                {{ photo.legende }}
+              </p>
+
+              <span class="gallery-open">
+                    Agrandir ↗
+                  </span>
+
+            </div>
+
+          </div>
+
+        </button>
+
+        }
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       MODALE PHOTO
+  ======================================================= -->
+
+  @if (photoSelectionnee !== null) {
+
+  <div
+    class="photo-modal"
+    (click)="fermerPhoto()"
+  >
+
+    <button
+      type="button"
+      class="modal-close"
+      (click)="fermerPhoto(); $event.stopPropagation()"
+    >
+      ×
+    </button>
+
+
+    <button
+      type="button"
+      class="modal-navigation modal-prev"
+      (click)="photoPrecedente(); $event.stopPropagation()"
+    >
+      ‹
+    </button>
+
+
+    <div
+      class="modal-content"
+      (click)="$event.stopPropagation()"
+    >
+
+      <img
+        [src]="photos[photoSelectionnee].url"
+        [alt]="photos[photoSelectionnee].legende"
+      >
+
+      <p>
+        {{ photos[photoSelectionnee].legende }}
+      </p>
+
+    </div>
+
+
+    <button
+      type="button"
+      class="modal-navigation modal-next"
+      (click)="photoSuivante(); $event.stopPropagation()"
+    >
+      ›
+    </button>
+
+  </div>
+
+  }
+
+
+  <!-- ======================================================
+       VŒUX
+  ======================================================= -->
+
+  <section class="wishes-section">
+
+    <div class="section-container">
+
+      <div class="wishes-card">
+
+        <div class="wishes-decoration wishes-decoration-one">
+          ✦
+        </div>
+
+        <div class="wishes-decoration wishes-decoration-two">
+          ✦
+        </div>
+
+
+        <span class="section-kicker">
+            POUR CETTE NOUVELLE ANNÉE
+          </span>
+
+
+        <h2>
+          Je te souhaite...
+        </h2>
+
+
+        <div class="wishes-grid">
+
+          <div>
+            <span>❤️</span>
+            <strong>Santé</strong>
+          </div>
+
+          <div>
+            <span>✨</span>
+            <strong>Réussite</strong>
+          </div>
+
+          <div>
+            <span>🕊️</span>
+            <strong>Paix</strong>
+          </div>
+
+          <div>
+            <span>💫</span>
+            <strong>Bonheur</strong>
+          </div>
+
+          <div>
+            <span>🙏</span>
+            <strong>Bénédictions</strong>
+          </div>
+
+          <div>
+            <span>🚀</span>
+            <strong>Succès</strong>
+          </div>
+
+        </div>
+
+
+        <p class="wishes-text">
+
+          Que cette nouvelle année soit remplie
+          de portes qui s'ouvrent,
+          de rêves qui deviennent réalité
+          et de raisons de sourire chaque jour.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       LIVRE D'OR
+  ======================================================= -->
+
+  <section class="guestbook-section">
+
+    <div class="section-container">
+
+      <div class="section-heading centered">
+
+          <span class="section-kicker">
+            LIVRE D'OR
+          </span>
+
+        <h2>
+          Laisse-lui
+          <span>un petit mot</span>
+        </h2>
+
+        <p>
+          Écris quelques mots pour souhaiter
+          un merveilleux anniversaire à Pierre.
+        </p>
+
+      </div>
+
+
+      <div class="guestbook-layout">
+
+        <!-- Formulaire -->
+        <div class="guestbook-form">
+
+          <div class="input-group">
+
+            <label for="nom">
+              Ton nom
+            </label>
+
+            <input
+              id="nom"
+              type="text"
+              [(ngModel)]="nouveauNom"
+              maxlength="40"
+              placeholder="Ex : Maurice"
+            >
+
+          </div>
+
+
+          <div class="input-group">
+
+            <label for="message">
+              Ton message
+            </label>
+
+            <textarea
+              id="message"
+              [(ngModel)]="nouveauMessage"
+              rows="6"
+              maxlength="400"
+              placeholder="Écris ton message d'anniversaire..."
+            ></textarea>
+
+            <span class="character-counter">
+
+                {{ nouveauMessage.length }}/400
+
+              </span>
+
+          </div>
+
+
+          @if (erreurLivreDor) {
+
+          <p class="form-error">
+            {{ erreurLivreDor }}
+          </p>
+
+          }
+
+
+          <button
+            type="button"
+            class="button-primary guestbook-submit"
+            (click)="ajouterMessageLivreDor()"
+          >
+
+              <span>
+                💌
+              </span>
+
+            Publier mon message
+
+          </button>
+
+        </div>
+
+
+        <!-- Messages -->
+        <div class="guestbook-messages">
+
+          <div class="messages-header">
+
+            <h3>
+              Messages
+            </h3>
+
+            <span>
+                {{ livreDor.length }}
+              </span>
+
+          </div>
+
+
+          <div class="messages-list">
+
+            @for (msg of livreDor; track $index) {
+
+            <article class="message-card">
+
+              <div class="message-avatar">
+
+                {{ initiale(msg.nom) }}
+
+              </div>
+
+
+              <div class="message-content">
+
+                <div class="message-top">
+
+                  <strong>
+                    {{ msg.nom }}
+                  </strong>
+
+                  <span>
+                        {{ msg.date }}
+                      </span>
+
+                </div>
+
+
+                <p>
+                  {{ msg.message }}
+                </p>
+
+              </div>
+
+            </article>
+
+            }
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       WHATSAPP
+  ======================================================= -->
+
+  <section class="whatsapp-section">
+
+    <div class="whatsapp-card">
+
+      <div class="whatsapp-icon">
+        💬
+      </div>
+
+
+      <div>
+
+          <span>
+            UNE DERNIÈRE ATTENTION
+          </span>
+
+        <h2>
+          Envoie-lui directement
+          tes vœux
+        </h2>
+
+        <p>
+          Un petit message peut rendre
+          cette journée encore plus spéciale.
+        </p>
+
+      </div>
+
+
+      <button
+        type="button"
+        class="whatsapp-button"
+        (click)="envoyerWhatsapp()"
+      >
+
+        Ouvrir WhatsApp
+
+        <span>
+            ↗
+          </span>
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <!-- ======================================================
+       FINAL
+  ======================================================= -->
+
+  <section class="final-section">
+
+    <div class="final-glow"></div>
+
+    <p class="final-small">
+      02 SEPTEMBRE 2026
+    </p>
+
+
+    <div class="final-cake">
+      🎂
+    </div>
+
+
+    <h2>
+      Joyeux Anniversaire
+    </h2>
+
+
+    <h3>
+      Pierre Togo
+    </h3>
+
+
+    <p>
+      Que cette journée soit le début
+      d'une année extraordinaire.
+    </p>
+
+
+    <button
+      type="button"
+      class="button-primary"
+      (click)="grandeCelebration()"
+    >
+
+      🎆 Célébrer encore une fois
+
+    </button>
+
+  </section>
+
+
+  <!-- ======================================================
+       FOOTER
+  ======================================================= -->
+
+  <footer class="footer">
+
+    <div class="footer-line"></div>
+
+    <p>
+      Créé avec
+      <span>♥</span>
+      spécialement pour Pierre
+    </p>
+
+
+    <strong>
+      Maurice
+    </strong>
+
+
+    <small>
+      © 02 Septembre 2026 • Un souvenir pour toujours
+    </small>
+
+  </footer>
+
+  }
+
+</div>
